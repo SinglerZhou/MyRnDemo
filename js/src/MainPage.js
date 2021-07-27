@@ -1,7 +1,10 @@
+
+import 'react-native-gesture-handler';
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet, FlatList } from "react-native";
 import BaseScene from "./base/BaseScene";
 import NativeAndroid from "./NativeAndroid";
+import {NavigationContainer} from "@react-navigation/native";
 
 const TAG = "MainPage";
 
@@ -101,7 +104,7 @@ export default class MainPage extends BaseScene {
      */
     onPressBack() {
         console.log("MainPage", "返回按钮 onPressBack");
-        
+        this.props.navigation.navigate('App');
     }
 }
 
